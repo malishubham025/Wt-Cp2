@@ -1,0 +1,107 @@
+#formSection{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f3f0eb;
+    display: flex;
+    opacity: 0;
+    transition: 500ms ease-in-out;
+}
+#formSection h5, #formSection h4{
+    font-size: xx-large;
+    width: 100%;
+    padding: 0px;
+}
+#formSection h4{
+    width: 100%;
+    font-weight: 900;
+    font-size: xx-large;
+}
+#formleft{
+    position: relative;
+    padding: 3vw;
+    height: auto;
+    display: block;
+    margin: 0px 5px 0px 10px;
+    width: calc(0.6*100%);
+    overflow: hidden;
+    transition: 1s ease-in-out;
+    opacity: 0;
+}
+#formright{
+    padding: 10px 0px 20px 40px;
+    background-color: #757575;
+    color: white;
+    margin: 0px 100px 0px 5px;
+    width: calc(0.4*100%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    opacity: 0;
+    transition:  1s ease-in-out;
+
+}
+#leftbutton{
+    position: relative;
+    justify-content: space-between;
+    display: flex;
+    transform: translateX(-600px);
+    transition: 1.3s ease-in-out;
+}
+.leftbutton-after{
+    transform: translateX(0) !important;
+}
+.formbuttons{
+    position: relative;
+    padding-top: 1vw;
+    display: block;
+    height: 120px;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.formbuttons img{
+    width: 80%;
+    height: 80%;
+}
+.formbuttons:hover{
+    cursor: pointer;
+    background-color: #757575;
+    color: white;
+    transition: 0.5s ease-in-out;
+}
+#formSection #formSectionButtons{
+    width: 30%;
+}
+.formIcon{
+    padding: 3px !important;
+    /* position: absolute; */
+    background-color: #fddb3a;
+    margin: auto;
+    width: 6vw;
+    height: 6vw;
+    border-radius: 20px;
+}
+#formright input[name="inputs"]{
+    font-size: 15px;
+    height: 40px;
+    width: 80%;
+    border-radius: 5px;
+    border-width: 1px;
+    margin: 3px 5px 4px 0px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+input[type="radio"]{
+    margin: 5px 10px 10px 5px;
+}
+#formright button{
+    font-size: 20px;
+    background-color: #fddb3a;
+    border-radius: 10px;
+    border-width: 1px;
+    width: 80%;
+    height: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.leftform-after{
+    opacity: 1 !important;
+}

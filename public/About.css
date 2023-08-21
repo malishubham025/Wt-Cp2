@@ -1,0 +1,106 @@
+#about{
+    color: aliceblue;
+    display: flex;
+}
+.about-left{
+    overflow-x: hidden;
+    width: 50%;
+    align-items: center;
+    display: flex;
+    position: relative;
+}
+#right{
+    width: 50%;
+}
+.about-img-project{
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    height: 180px;
+    width: 150px;
+    border-color: antiquewhite;
+    border:  3px solid;
+    
+}
+#projects{
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    width: 22%;
+    margin:  100px auto 50px auto;
+    color: aliceblue;
+}
+.about-right-img-project{
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    height: 180px;
+    width: 150px;
+    border-color: antiquewhite;
+    border:  3px solid;
+    
+}
+.about-card1 ,.about-card2 , .about-card3{
+    opacity: 0;
+    transform: translateX(-100px);
+    display: flex;
+    border: 3px solid;
+    border-color: aliceblue;
+    width: 70%;
+    margin: 0 15px 0 auto;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 300px;
+}
+.about-card4 ,.about-card5 , .about-card6{
+    /* opacity: 0; */
+    /* position: relative; */
+    opacity: 0;
+    transform: translateX(100px);
+    display: flex;
+    border: 3px solid;
+    border-color: aliceblue;
+    width: 70%;
+    margin: 0 auto 0 15px;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 280px;
+}
+.about-right-about-project{
+    width: 50%;
+}
+.about-right-about-project p{
+    margin-top: 30px;
+    width: 100%;
+}
+.about-about-project{
+    width: 50%;
+}
+.about-about-project p{
+    margin-top: 30px;
+    width: 100%;
+}
+.about-show-element{
+    opacity: 1;
+    transition:  1s ease-in-out;
+    transform: translate(0);
+}
+.about-show-element1{
+    opacity: 1;
+    transition:  1s ease-in-out;
+    transform: translate(0);
+}
+.about-cards-line{
+    height: 0;
+    width: 5px;
+    border-radius: 50px;
+    background-color: antiquewhite;
+    top: 0;
+    position: absolute;
+    right: 0;
+    transform-origin: top;
+    margin-left: 60px;
+    transition: 2s ease-in-out;
+}

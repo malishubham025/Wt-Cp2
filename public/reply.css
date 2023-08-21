@@ -1,0 +1,19 @@
+.feedback{
+    background: url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cG9vciUyMGNoaWxkcmVufGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60') no-repeat center center;
+    background-size: cover;
+    font-family: 'Montserrat',sans-serif;
+    text-align: center;
+    padding: 40px 0px 40px 0px;
+}
+#reply{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 80px 0px 80px;
+}
+.replyDivs{
+    margin: 0px 5px 0px 5px;
+    border: solid 1px white;
+    width: 20vw;
+    height: 10vw;
+    border-radius: 10px;
+}

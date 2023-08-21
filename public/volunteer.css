@@ -1,0 +1,17 @@
+.volunteer{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    background-color: white;
+}
+#vol{
+    justify-content: space-between;
+    display: flex;
+}
+.volDivs{
+    width: 25%;
+    height: 120px;
+    border-radius: 10px;
+    background: transparent;
+    margin-right: 5px;
+    border: solid 1px black;
+}

@@ -1,0 +1,38 @@
+.tech{
+    background: url('https://www.compassion.com/Images/hungry-children-hero-2020_159459_1280x554.jpg') no-repeat center center;
+    background-size: cover;
+    max-width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 2px;
+    padding: 50px;
+    opacity: 0;
+    transition:  1s ease-in-out;
+}
+.tech h3, .tech h4{
+    color: white;
+}
+#divs{
+    justify-content: space-between;
+    display: flex;
+}
+#techButtons{
+    padding-top: 1vw;
+    display: block;
+    width: 20%;
+    height: auto;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#techButtons:hover{
+    background-color: #757575;
+    color: white;
+    /* transition: 0.5s ease-in-out; */
+    scale: 1.08;
+}
+.formIcon img{
+    width: 80%;
+    height: 80%;
+}
