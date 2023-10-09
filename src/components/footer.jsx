@@ -4,7 +4,7 @@ import React from "react";
 // import LinkedInIcon from '@mui/icons-material/LinkedIn';
 function Footer(){
     return(
-        <div className="footer">
+        <div className="footer" id="footer">
             <div className="footer-main">
                 <div className="footer-heading">
                     <h3>ShareFood.com</h3>

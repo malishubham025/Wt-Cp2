@@ -38,7 +38,7 @@ function Nav(){
             </div>
             <div className="options">
                 <a onMouseOver={handledot} onMouseOut={opacChange} name="one" href="/">Home</a>               
-                <a onMouseOver={handledot} onMouseOut={opacChange} name="two">Contact</a>
+                <a onMouseOver={handledot} onMouseOut={opacChange} name="two" href="#footer">Contact</a>
                 <a onMouseOver={handledot} onMouseOut={opacChange} name="three">About us</a>
                 <div className="line">
                      <div className="dot" style={{left:position,opacity:opac}}>

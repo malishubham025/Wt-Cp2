@@ -1,17 +1,46 @@
 .volunteer{
     font-family: 'Montserrat', sans-serif;
     text-align: center;
-    background-color: white;
+    background-color: #f3f0eb;
+    padding: 30px 50px;
 }
 #vol{
     justify-content: space-between;
     display: flex;
 }
 .volDivs{
-    width: 25%;
-    height: 120px;
+    cursor: pointer;
+    width: 23%;
     border-radius: 10px;
-    background: transparent;
+    position: relative;
     margin-right: 5px;
-    border: solid 1px black;
+    transition: ease-in-out 0.9s;
+}
+.volDivs:hover{
+    scale: 1.09;
+}
+.volFace img{
+    border-radius: 50%;
+    /* object-fit: cover; */
+    width: 50%;
+}
+#volDesc{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;  
+}
+#volDesc:hover{
+    background-color: #757575;
+    color: white;
+    transition: ease-in-out 0.9s;
+}
+.SocialMedia{
+    display: flex;
+    padding: 0px;
+}
+.volSocialMedia{
+    margin-right: 5px;
+    background-color: #fddb3a;
+    width: 20%;
+    border-radius: 50%;
 }

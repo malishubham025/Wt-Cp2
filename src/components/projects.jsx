@@ -1,9 +1,10 @@
 import React from "react";
+import { useState,useEffect } from "react";
 function Projects(){
     window.addEventListener("scroll",S);
     // var line=document.querySelector(".cards-line");
     // var height=0;
-
+    var [project,HandelProjects]=React.useState([])
     function S(){
         var line = document.querySelector(".about-cards-line");
         var h=window.innerHeight/5*4;
@@ -37,6 +38,35 @@ function Projects(){
         // console.log(height);
         // line.style.height=height;
     }
+    React.useEffect(()=>{
+        fetch('http://localhost:4500/',{
+            method:'GET',
+        }).then((responce)=>{
+            console.log("Effect is running...");
+            if (!responce.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return responce.json();
+        }).then((data)=>{
+            HandelProjects(data);
+            console.log(project);
+            // console.log("hello");
+            // console.log(data);
+            // console.log(data[0].info);
+            // HandelProjects((pvalue)=>{
+            //     return{
+            //         ...pvalue,
+            //         info
+            //     }
+            // })
+            // data.map((info)=>{
+                // console.log(info);
+            //     HandelProjects(info);
+            // })
+            // console.log(project);
+        })
+        
+    },[])
     return(
         <div>
             <h1 id="projects">Projects</h1>

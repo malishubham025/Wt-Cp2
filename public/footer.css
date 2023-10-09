@@ -41,10 +41,14 @@
     justify-content: center;
 }
 .footer-images img{
+    transition: 1s ease-in-out;
     cursor: pointer;
     height: 30px;
     width: 30px;
     margin-left: 20px;
+}
+.footer-images img:hover{
+    scroll-behavior: 1.09;
 }
 .footer-images p{
     /* height: 20px;
