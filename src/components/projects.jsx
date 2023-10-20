@@ -4,7 +4,14 @@ function Projects(){
     window.addEventListener("scroll",S);
     // var line=document.querySelector(".cards-line");
     // var height=0;
-    var [project,HandelProjects]=React.useState([])
+    var [project,HandelProjects]=React.useState([
+      { _id: 1, info: 'Loading...' },
+      { _id: 2, info: 'Loading...' },
+      { _id: 3, info: 'Loading...' },
+      { _id: 4, info: 'Loading...' },
+      { _id: 5, info: 'Loading...' },
+      { _id: 6, info: 'Loading...' }
+    ])
     function S(){
         var line = document.querySelector(".about-cards-line");
         var h=window.innerHeight/5*4;
@@ -39,7 +46,7 @@ function Projects(){
         // line.style.height=height;
     }
     React.useEffect(()=>{
-        fetch('http://localhost:4500/',{
+        fetch('http://localhost:4000/',{
             method:'GET',
         }).then((responce)=>{
             console.log("Effect is running...");
@@ -49,7 +56,7 @@ function Projects(){
             return responce.json();
         }).then((data)=>{
             HandelProjects(data);
-            console.log(project);
+            // console.log(project);
             // console.log("hello");
             // console.log(data);
             // console.log(data[0].info);
@@ -78,7 +85,7 @@ function Projects(){
 
                           </div>
                           <div className="about-about-project">
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat et ea ducimus aliquid architecto, cumque laboriosam officia illo? Perferendis nulla quasi nam totam quia error quae voluptatibus eos, rem atque!</p>
+                            <p>{project[0].info}</p>
                           </div>
                      </div>
                      <div className="about-card2 dis">
@@ -86,7 +93,8 @@ function Projects(){
 
                     </div>
                     <div className="about-about-project">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat et ea ducimus aliquid architecto, cumque laboriosam officia illo? Perferendis nulla quasi nam totam quia error quae voluptatibus eos, rem atque!</p>
+                    {/* <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat et ea ducimus aliquid architecto, cumque laboriosam officia illo? Perferendis nulla quasi nam totam quia error quae voluptatibus eos, rem atque!</p> */}
+                    <p>{project[1].info}</p>
                     </div>
                     </div>
                     <div className="about-card3 dis">
@@ -94,7 +102,8 @@ function Projects(){
 
                     </div>
                     <div className="about-about-project">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat et ea ducimus aliquid architecto, cumque laboriosam officia illo? Perferendis nulla quasi nam totam quia error quae voluptatibus eos, rem atque!</p>
+                    {/* <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat et ea ducimus aliquid architecto, cumque laboriosam officia illo? Perferendis nulla quasi nam totam quia error quae voluptatibus eos, rem atque!</p> */}
+                    <p>{project[2].info}</p>
                     </div>                        
                     </div>
                     </div>
@@ -108,7 +117,8 @@ function Projects(){
 
                 </div>
                 <div className="about-right-about-project">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat et ea ducimus aliquid architecto, cumque laboriosam officia illo? Perferendis nulla quasi nam totam quia error quae voluptatibus eos, rem atque!</p>
+                {/* <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat et ea ducimus aliquid architecto, cumque laboriosam officia illo? Perferendis nulla quasi nam totam quia error quae voluptatibus eos, rem atque!</p> */}
+                <p>{project[3].info}</p>
                 </div>  
                 </div>
                 <div className="about-card5 dis1">
@@ -116,7 +126,8 @@ function Projects(){
 
                 </div>
                 <div className="about-right-about-project">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat et ea ducimus aliquid architecto, cumque laboriosam officia illo? Perferendis nulla quasi nam totam quia error quae voluptatibus eos, rem atque!</p>
+                {/* <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat et ea ducimus aliquid architecto, cumque laboriosam officia illo? Perferendis nulla quasi nam totam quia error quae voluptatibus eos, rem atque!</p> */}
+                <p>{project[4].info}</p>
                 </div> 
                 </div>
                 <div className="about-card6 dis1">
@@ -124,7 +135,8 @@ function Projects(){
 
                 </div>
                 <div className="about-right-about-project">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat et ea ducimus aliquid architecto, cumque laboriosam officia illo? Perferendis nulla quasi nam totam quia error quae voluptatibus eos, rem atque!</p>
+                {/* <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat et ea ducimus aliquid architecto, cumque laboriosam officia illo? Perferendis nulla quasi nam totam quia error quae voluptatibus eos, rem atque!</p> */}
+                <p>{project[5].info}</p>
                 </div> 
                 </div>
                 </div>
