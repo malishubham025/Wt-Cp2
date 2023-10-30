@@ -14,6 +14,7 @@ function Footer(){
                     <p>About</p>
                     <p>Contact</p>
                     <a href="login" style={{textDecoration:"none"}}><p>Login</p></a>
+                    <a href="Admin" style={{textDecoration:"none"}}><p>Admin</p></a>
                     <p>Signup</p>
                     <p>Blog</p>
 

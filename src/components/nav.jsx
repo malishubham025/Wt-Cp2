@@ -4,17 +4,17 @@ function Nav(){
     var [opac,changeopac]=React.useState(0);
     function handledot(event){
         document.querySelector(".dot").style.opacity=1;
-        const e=event.target;
+        
         var name=event.target.name;
-        if(name=="one"){
+        if(name==="one"){
             changeposition(30);
             changeopac(1);
         }
-        if(name=="two"){
+        if(name==="two"){
             changeposition(125);
             changeopac(1);
         }
-        if(name=="three"){
+        if(name==="three"){
             changeposition(240);
             changeopac(1);
         }

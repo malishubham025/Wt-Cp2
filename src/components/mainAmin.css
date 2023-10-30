@@ -1,0 +1,29 @@
+/* body{
+    background-color: black;
+} */
+.Admin-dashboard{
+    display: flex;
+}
+.Admin-logo{
+    height: 70px;
+    width: 70px;
+}
+.Admin-img{
+    height: 70px;
+    width: 70px;
+}
+.Admin-img img{
+    width: 10%;
+}
+.Admin-left{
+    width: 40%;
+    /* display: flex;
+    flex-direction: row; */
+    background-color: antiquewhite;
+    padding: 30px;
+}
+.Admin-items{
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}

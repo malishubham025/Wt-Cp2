@@ -11,6 +11,7 @@ import Technical from './technical';
 function App(){
     return(
         <div>
+                
    <Nav/>
    <Main/>
    <Form />
@@ -20,6 +21,7 @@ function App(){
    <Volunteer />
    <Reply />
    <Footer />
+   
   </div>
     );
 }
