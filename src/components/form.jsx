@@ -1,5 +1,72 @@
 import React from "react";
 function Form() {
+    
+    const loadscript = (src) => {
+        return new Promise((resolve) => {
+            const script = document.createElement('script')
+            script.src =src
+            script.onload =()=>{
+                resolve(true)
+            }
+            script.onerror=()=>{
+                resolve(false)
+            }
+            document.body.appendChild(script)
+        })
+    }
+
+    const displayRazorpay = async (event) => {
+        event.preventDefault();
+    
+        const fullName = document.getElementById("mainFormName").value;
+        const email = document.getElementById("mainFormEmail").value;
+        const amount = parseFloat(document.getElementById("mainFormAmount").value);
+    
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        const isEmailValid = emailPattern.test(email);
+    
+        if (isEmailValid && amount > 0) {
+        } else {
+          if (!isEmailValid) {
+            alert("Please enter a valid email address.");
+          }
+          if (amount <= 0) {
+            alert("Please enter an amount greater than 0.");
+          }
+        }
+
+        const res = await loadscript("https://checkout.razorpay.com/v1/checkout.js")
+
+        if (!res) {
+            alert("Your are offline...can't connect!!")
+            return
+        }
+
+        const options = {
+            key:"rzp_test_E5QBapRgbsBuqJ",
+            currency:"INR",
+            amount: amount*100,
+            name:"ShareFood.com",
+            description: "Thanks for Donating!!!",
+            image: "./images/logo.png",
+
+            handler: function (response){
+                console.log(response.razorpay_payment_id)
+                alert("Payment Successfull")
+            },
+            prefill:{
+                name:fullName,
+                email: email
+            },
+            theme: {
+                color: "#3399cc"
+            }
+        };
+
+        const paymentObject = new window.Razorpay(options)
+        paymentObject.open()
+
+    }
     window.addEventListener("scroll",S);
     function S(){
         var h=window.innerHeight/5*4;
@@ -41,7 +108,7 @@ function Form() {
                 </div>
             </div>
             <div id="formright">
-                <form action="" method="post">
+                <form method="post" onSubmit={(event) => displayRazorpay(event)}>
                     <h5>Donate Now</h5>
                     
                     <h4>Giving is the greatest act of grace</h4>
@@ -51,11 +118,8 @@ function Form() {
                     <input type="email" name="inputs" placeholder="Email"/><br />
                     Amount to Give <br />
                     <input type="text" name="inputs" placeholder="Amount"/><br />
-                    <input type="radio" name="payMethod" />Paypal
-                    <input type="radio" name="payMethod" />Credit card
-                    <input type="radio" name="payMethod" />Payoneer
                     <br />
-                    <button>Donate Now</button>
+                    <button type="submit">Donate Now</button>
                 </form>
             </div>
         </section>
